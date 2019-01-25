@@ -1,28 +1,28 @@
-package Aufgabe1;
+package at.ac.fh_kufstein.weather;
 
 import java.util.ArrayList;
 
 public class Weather
 {
 
-    private Object coord;
+    private Coord coord;
     private ArrayList<Object> weather;
     private String base;
-    private Object main;
+    private Main main;
     private int visibility;
-    private Object wind;
-    private Object clouds;
+    private Wind wind;
+    private Clouds clouds;
     private int dt;
-    private Object sys;
+    private Sys sys;
     private int id;
     private String name;
     private int cod;
 
-    public Object getCoord() {
+    public Coord getCoord() {
         return coord;
     }
 
-    public void setCoord(Object coord) {
+    public void setCoord(Coord coord) {
         this.coord = coord;
     }
 
@@ -42,11 +42,11 @@ public class Weather
         this.base = base;
     }
 
-    public Object getMain() {
+    public Main getMain() {
         return main;
     }
 
-    public void setMain(Object main) {
+    public void setMain(Main main) {
         this.main = main;
     }
 
@@ -58,19 +58,19 @@ public class Weather
         this.visibility = visibility;
     }
 
-    public Object getWind() {
+    public Wind getWind() {
         return wind;
     }
 
-    public void setWind(Object wind) {
+    public void setWind(Wind wind) {
         this.wind = wind;
     }
 
-    public Object getClouds() {
+    public Clouds getClouds() {
         return clouds;
     }
 
-    public void setClouds(Object clouds) {
+    public void setClouds(Clouds clouds) {
         this.clouds = clouds;
     }
 
@@ -82,11 +82,11 @@ public class Weather
         this.dt = dt;
     }
 
-    public Object getSys() {
+    public Sys getSys() {
         return sys;
     }
 
-    public void setSys(Object sys) {
+    public void setSys(Sys sys) {
         this.sys = sys;
     }
 
