@@ -1,12 +1,17 @@
 package at.ac.fh_kufstein.weather;
 
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.ArrayList;
 
+@XmlRootElement(name = "weather")
+@XmlAccessorType(XmlAccessType.FIELD)
 public class Weather
 {
 
     private Coord coord;
-    private ArrayList<Object> weather;
+    private ArrayList<WeatherObj> weather;
     private String base;
     private Main main;
     private int visibility;
@@ -26,11 +31,11 @@ public class Weather
         this.coord = coord;
     }
 
-    public ArrayList<Object> getWeather() {
+    public ArrayList<WeatherObj> getWeather() {
         return weather;
     }
 
-    public void setWeather(ArrayList<Object> weather) {
+    public void setWeather(ArrayList<WeatherObj> weather) {
         this.weather = weather;
     }
 
@@ -113,5 +118,4 @@ public class Weather
     public void setCod(int cod) {
         this.cod = cod;
     }
-
 }

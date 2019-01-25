@@ -1,6 +1,7 @@
 package at.ac.fh_kufstein;
 
 import at.ac.fh_kufstein.weather.Weather;
+import at.ac.fh_kufstein.xml.XML;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import java.net.URL;
 
@@ -15,8 +16,14 @@ public class API
     public static void getCurrentWeather(){
 
         try {
+
             ObjectMapper mapper = new ObjectMapper();
             Weather currWeather = mapper.readValue(new URL(OPENWEATHER_API + "&appid=" + OPENWEATHER_APIKEY), Weather.class);
+
+            // Marshalling
+
+            XML.marshalling(currWeather);
+
         } catch (Exception ex){
             ex.printStackTrace();
         }
