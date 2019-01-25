@@ -1,8 +1,6 @@
 package at.ac.fh_kufstein.weather;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 
 @XmlRootElement(name = "weather")
@@ -10,6 +8,7 @@ import java.util.ArrayList;
 public class Weather
 {
 
+    @XmlTransient
     private Coord coord;
     private ArrayList<WeatherObj> weather;
     private String base;

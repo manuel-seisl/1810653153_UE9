@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <weather>
-    <coord>
-        <lat>47.47</lat>
-        <lon>12.58</lon>
-    </coord>
     <weather>
         <description>broken clouds</description>
         <icon>04d</icon>
@@ -30,9 +26,9 @@
     <sys>
         <country>AT</country>
         <id>6877</id>
-        <message>0.0035</message>
+        <message>0.0032</message>
         <sunrise>1548398640</sunrise>
-        <sunset>1548432035</sunset>
+        <sunset>1548432036</sunset>
         <type>1</type>
     </sys>
     <id>2774347</id>
