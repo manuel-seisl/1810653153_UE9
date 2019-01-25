@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <weather>
+    <coord>
+        <lat>47.47</lat>
+        <lon>12.58</lon>
+    </coord>
     <weather>
         <description>broken clouds</description>
         <icon>04d</icon>
         <id>803</id>
         <main>Clouds</main>
     </weather>
-    <base>stations</base>
     <main>
         <humidity>63</humidity>
         <pressure>1015</pressure>
@@ -16,22 +19,14 @@
     </main>
     <visibility>10000</visibility>
     <wind>
-        <deg>320</deg>
-        <speed>4.6</speed>
+        <deg>300</deg>
+        <speed>7.2</speed>
     </wind>
     <clouds>
         <all>75</all>
     </clouds>
-    <dt>1548418800</dt>
-    <sys>
-        <country>AT</country>
-        <id>6877</id>
-        <message>0.0032</message>
-        <sunrise>1548398640</sunrise>
-        <sunset>1548432036</sunset>
-        <type>1</type>
-    </sys>
-    <id>2774347</id>
+    <dt>0</dt>
+    <id>0</id>
     <name>Salzburg</name>
     <cod>200</cod>
 </weather>

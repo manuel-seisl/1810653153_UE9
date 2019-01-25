@@ -1,5 +1,8 @@
 package at.ac.fh_kufstein.weather;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 
@@ -8,9 +11,9 @@ import java.util.ArrayList;
 public class Weather
 {
 
-    @XmlTransient
     private Coord coord;
     private ArrayList<WeatherObj> weather;
+    @XmlTransient
     private String base;
     private Main main;
     private int visibility;
@@ -38,6 +41,7 @@ public class Weather
         this.weather = weather;
     }
 
+    @JsonIgnore
     public String getBase() {
         return base;
     }
@@ -70,6 +74,15 @@ public class Weather
         this.wind = wind;
     }
 
+    @JsonProperty("windy")
+    public Wind getWindy() {
+        return wind;
+    }
+
+    public void setWindy(Wind wind) {
+        this.wind = wind;
+    }
+
     public Clouds getClouds() {
         return clouds;
     }
@@ -78,6 +91,7 @@ public class Weather
         this.clouds = clouds;
     }
 
+    @JsonIgnore
     public int getDt() {
         return dt;
     }
@@ -86,6 +100,7 @@ public class Weather
         this.dt = dt;
     }
 
+    @JsonIgnore
     public Sys getSys() {
         return sys;
     }
@@ -94,6 +109,7 @@ public class Weather
         this.sys = sys;
     }
 
+    @JsonIgnore
     public int getId() {
         return id;
     }
