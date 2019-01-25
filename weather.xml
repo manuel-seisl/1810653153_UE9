@@ -20,19 +20,19 @@
     </main>
     <visibility>10000</visibility>
     <wind>
-        <deg>330</deg>
-        <speed>3.6</speed>
+        <deg>320</deg>
+        <speed>4.6</speed>
     </wind>
     <clouds>
         <all>75</all>
     </clouds>
-    <dt>1548417000</dt>
+    <dt>1548418800</dt>
     <sys>
         <country>AT</country>
         <id>6877</id>
-        <message>0.0047</message>
-        <sunrise>1548398641</sunrise>
-        <sunset>1548432034</sunset>
+        <message>0.0035</message>
+        <sunrise>1548398640</sunrise>
+        <sunset>1548432035</sunset>
         <type>1</type>
     </sys>
     <id>2774347</id>

@@ -1,12 +1,15 @@
 package at.ac.fh_kufstein.xml;
 
 import at.ac.fh_kufstein.weather.Weather;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import javax.swing.*;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class XML
@@ -36,6 +39,34 @@ public class XML
             // Meldung anzeigen
 
             JOptionPane.showMessageDialog(null, "XML Datei erfolgreich angelegt!", "Meldung", JOptionPane.INFORMATION_MESSAGE);
+
+        } catch (Exception ex){
+            ex.printStackTrace();
+        }
+
+    }
+
+    // Wetterdaten aus XML auslesen
+
+    public static void unmarshalling() {
+
+        try {
+
+            File file = new File(WEATHER_XML);
+            ObjectMapper mapper = new ObjectMapper();
+
+            if (!file.exists()){
+                JOptionPane.showMessageDialog(null, "XML Datei nicht vorhanden!", "Meldung", JOptionPane.INFORMATION_MESSAGE);
+                return;
+            }
+
+            JAXBContext context = JAXBContext.newInstance(Weather.class);
+            Unmarshaller um = context.createUnmarshaller();
+            Weather currWeather = (Weather)um.unmarshal(file);
+
+            // XML zu JSON
+
+            mapper.writeValue(System.out, currWeather);
 
         } catch (Exception ex){
             ex.printStackTrace();

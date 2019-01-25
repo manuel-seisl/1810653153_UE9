@@ -24,6 +24,10 @@ public class API
 
             XML.marshalling(currWeather);
 
+            // Unmarshalling
+
+            XML.unmarshalling();
+
         } catch (Exception ex){
             ex.printStackTrace();
         }
