@@ -1,7 +1,9 @@
 package at.ac.fh_kufstein.weather;
 
+import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonSetter;
 
 import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
@@ -74,15 +76,6 @@ public class Weather
         this.wind = wind;
     }
 
-    @JsonProperty("windy")
-    public Wind getWindy() {
-        return wind;
-    }
-
-    public void setWindy(Wind wind) {
-        this.wind = wind;
-    }
-
     public Clouds getClouds() {
         return clouds;
     }
@@ -118,10 +111,12 @@ public class Weather
         this.id = id;
     }
 
+    @JsonGetter("namea")
     public String getName() {
         return name;
     }
 
+    @JsonSetter("name")
     public void setName(String name) {
         this.name = name;
     }

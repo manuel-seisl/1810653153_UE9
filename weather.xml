@@ -6,21 +6,21 @@
     </coord>
     <weather>
         <description>broken clouds</description>
-        <icon>04d</icon>
+        <icon>04n</icon>
         <id>803</id>
         <main>Clouds</main>
     </weather>
     <main>
-        <humidity>63</humidity>
-        <pressure>1015</pressure>
-        <temp>271.15</temp>
-        <temp_max>271.15</temp_max>
-        <temp_min>271.15</temp_min>
+        <humidity>74</humidity>
+        <pressure>999</pressure>
+        <temp>274.15</temp>
+        <temp_max>274.15</temp_max>
+        <temp_min>274.15</temp_min>
     </main>
     <visibility>10000</visibility>
     <wind>
-        <deg>300</deg>
-        <speed>7.2</speed>
+        <deg>140</deg>
+        <speed>4.1</speed>
     </wind>
     <clouds>
         <all>75</all>
